@@ -60,10 +60,8 @@ window.RI_API = (function () {
     return grand;
   }
 
-  function colorForRank(uniqueSortedDesc, val) {
-    if (val === 0) return BAR_COLOR_DEFAULT;
-    var rank = uniqueSortedDesc.indexOf(val);
-    if (rank >= 0 && rank < 3) return BAR_COLORS[rank];
+  function colorForPosition(pos) {
+    if (pos >= 0 && pos < 3) return BAR_COLORS[pos];
     return BAR_COLOR_DEFAULT;
   }
 
@@ -77,18 +75,17 @@ window.RI_API = (function () {
     var indexed = grand.map(function (v, i) { return { q: i + 1, val: v }; });
     indexed.sort(function (a, b) { return b.val - a.val; });
 
-    var sortedVals = grand.slice().sort(function (a, b) { return b - a; });
-    var uniqueSortedDesc = sortedVals.filter(function (v, i) { return sortedVals.indexOf(v) === i; });
-
     if (!hasAny) {
       chartEl.innerHTML = '<div class="ri-chart-empty">' + S.ri_chart_empty + '</div>';
       return;
     }
 
+    // Рівно перші 3 позиції відсортованого масиву фарбуються (з дублікатами балів),
+    // решта — сірим. Нулі завжди сірі, навіть якщо потрапляють у перші три позиції.
     var html = '';
-    indexed.forEach(function (item) {
+    indexed.forEach(function (item, pos) {
       var h = maxV > 0 ? Math.round((item.val / maxV) * 90) + 10 : 10;
-      var color = colorForRank(uniqueSortedDesc, item.val);
+      var color = item.val === 0 ? BAR_COLOR_DEFAULT : colorForPosition(pos);
       html += '<div class="ri-bar-col">' +
         '<span class="ri-bar-val">' + item.val + '</span>' +
         '<div class="ri-bar" style="height:' + h + 'px;background:' + color + '"></div>' +
