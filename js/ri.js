@@ -33,7 +33,7 @@ window.RI_API = (function () {
 
   function sanitizeRank(val) {
     val = val.trim();
-    if (val === '' || val === '1' || val === '2' || val === '3') return val;
+    if (val === '' || val === '0' || val === '1' || val === '2' || val === '3') return val;
     return '';
   }
 

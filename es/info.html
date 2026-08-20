@@ -11,7 +11,7 @@
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ayuda | Polygraph Suite v8.9</title>
+  <title>Ayuda | Polygraph Suite v8.10</title>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%233a7cfd'/%3E%3Ctext x='50' y='68' font-size='55' text-anchor='middle' fill='white' font-family='Arial'%3EP%3C/text%3E%3C/svg%3E">
   <style>
     :root {
@@ -95,14 +95,14 @@
       <a href="info.html" class="active">ES</a>
     </div>
   </div>
-  <h1>Ayuda: Polygraph Suite v8.9</h1>
+  <h1>Ayuda: Polygraph Suite v8.10</h1>
 
   <div class="alert-box">
     <strong>Polygraph Suite</strong> es una herramienta digital integral para poligrafistas, diseñada para el cálculo matemático de poligramas, la construcción de matrices estadísticas y la generación de informes automatizados conforme a metodologías validadas.
   </div>
 
   <div class="new-box">
-    <strong><svg class="ic-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg> Novedades de la v8.9:</strong> La pestaña «R&amp;I» ahora incluye un gráfico de significancia de preguntas, soporte para varias pruebas independientes con sus propios títulos (como en ESS-M) y un encabezado de tabla adherente durante el desplazamiento.
+    <strong><svg class="ic-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg> Novedades de la v8.10:</strong> Se corrigió el título de la pestaña «R&I». Las celdas FROSS ahora aceptan un 0 explícito para facilitar la documentación.
   </div>
 
   <!-- ═══ SECCIÓN 1: ESS-M ═══ -->
@@ -270,7 +270,7 @@
   <p>Las puntuaciones del supervisor se almacenan por separado para cada prueba en el campo <code>sv</code> del archivo de la sesión, junto a <code>ess</code>, <code>cit</code> y <code>notes</code>. Cambiar entre pruebas en la lista desplegable no borra los datos introducidos.</p>
 
   <!-- ═══ SECCIÓN 5: R&I ═══ -->
-  <h2>5. Pestaña «R&amp;I» <span class="badge badge-notes">NUEVO v8.9</span></h2>
+  <h2>5. Pestaña «R&I» <span class="badge badge-notes">NUEVO v8.10</span></h2>
   <p>La técnica <strong>Relevant/Irrelevant (RI)</strong> es el método poligráfico más antiguo, que alterna preguntas relevantes (relacionadas con el caso) e irrelevantes/neutrales. El método principal de toma de decisiones en RI es la <strong>evaluación cualitativa global</strong> por parte del examinador de todo el poligrama — no existe una fórmula publicada oficialmente para determinar automáticamente SR/NSR.</p>
 
   <h3>5.1. El Método FROSS</h3>
@@ -287,7 +287,7 @@
     <li>Si solo se observan dos reactividades dentro de un canal, reciben los rangos 3 y 2 (sin el 1).</li>
     <li>Si no se observa una diferencia notable en la reactividad, el canal no se puntúa (la celda queda en blanco).</li>
   </ul>
-  <p>Los rangos de los canales se suman para cada pregunta relevante (SUBTOTALS), y a través de varias presentaciones se suman en un «Rango Total General». La(s) pregunta(s) con el rango total más alto se resaltan en color; si varias preguntas alcanzan el mismo rango máximo, todas se resaltan, sin elegir artificialmente un único «ganador».</p>
+  <p>Los rangos de los canales se suman para cada pregunta relevante (SUBTOTALS), y a través de varias presentaciones se suman en un «Rango Total General». En el gráfico de significancia, las tres preguntas con el rango total más alto se resaltan en color (rojo — el más alto, naranja — el segundo, amarillo — el tercero), el resto en gris. Si varias preguntas alcanzan el mismo rango dentro de los tres primeros, reciben el mismo color.</p>
 
   <h3>5.3. Fuentes</h3>
   <ul>
@@ -356,7 +356,7 @@
       <p>Prueba de información oculta. Matriz de probabilidad dinámica de Lykken.</p>
     </div>
     <div class="col-card green">
-      <h4><svg class="ic-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18M7 8l-4 4 4 4M17 8l4 4-4 4"/></svg> R&amp;I <span style="font-size:10px; background:#dcfce7; color:#166534; padding:1px 5px; border-radius:3px;">NUEVO</span></h4>
+      <h4><svg class="ic-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18M7 8l-4 4 4 4M17 8l4 4-4 4"/></svg> R&I <span style="font-size:10px; background:#dcfce7; color:#166534; padding:1px 5px; border-radius:3px;">NUEVO</span></h4>
       <p>Método de rangos FROSS para análisis complementario de la prueba de screening RI.</p>
     </div>
     <div class="col-card green">
@@ -393,7 +393,7 @@
   </div>
 
   <div class="footer">
-    Polygraph Suite v8.9 | Desarrollado para la evaluación poligráfica profesional<br>
+    Polygraph Suite v8.10 | Desarrollado para la evaluación poligráfica profesional<br>
     Todas las disposiciones metodológicas se basan en publicaciones oficiales y tablas de referencia del ESS-M y CIT.
   </div>
 </div>

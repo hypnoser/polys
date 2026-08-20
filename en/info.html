@@ -11,7 +11,7 @@
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Help | Polygraph Suite v8.9</title>
+  <title>Help | Polygraph Suite v8.10</title>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%233a7cfd'/%3E%3Ctext x='50' y='68' font-size='55' text-anchor='middle' fill='white' font-family='Arial'%3EP%3C/text%3E%3C/svg%3E">
   <style>
     :root {
@@ -95,14 +95,14 @@
       <a href="../es/info.html">ES</a>
     </div>
   </div>
-  <h1>Help: Polygraph Suite v8.9</h1>
+  <h1>Help: Polygraph Suite v8.10</h1>
 
   <div class="alert-box">
     <strong>Polygraph Suite</strong> is a comprehensive digital tool for polygraph examiners, designed for mathematical polygram scoring, building statistical matrices, and generating automated reports in accordance with validated methodologies.
   </div>
 
   <div class="new-box">
-    <strong><svg class="ic-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg> What's new in v8.9:</strong> The "R&amp;I" tab now includes a question significance chart, support for multiple independent tests with their own titles (as in ESS-M), and a sticky table header while scrolling.
+    <strong><svg class="ic-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg> What's new in v8.10:</strong> Fixed the "R&I" tab title. FROSS cells now accept an explicit 0 for easier documentation.
   </div>
 
   <!-- ═══ SECTION 1: ESS-M ═══ -->
@@ -270,7 +270,7 @@
   <p>Supervisor scores are stored separately for each test in the session file's <code>sv</code> field, alongside <code>ess</code>, <code>cit</code>, and <code>notes</code>. Switching between tests in the dropdown does not lose entered data.</p>
 
   <!-- ═══ SECTION 5: R&I ═══ -->
-  <h2>5. "R&amp;I" Tab <span class="badge badge-notes">NEW v8.9</span></h2>
+  <h2>5. "R&I" Tab <span class="badge badge-notes">NEW v8.10</span></h2>
   <p>The <strong>Relevant/Irrelevant (RI)</strong> technique is the oldest polygraph method, alternating relevant (case-related) and irrelevant/neutral questions. The primary method of decision-making in RI is <strong>global qualitative evaluation</strong> by the examiner across the entire chart — no officially published formula exists for automatically determining SR/NSR.</p>
 
   <h3>5.1. The FROSS Method</h3>
@@ -287,7 +287,7 @@
     <li>If only two reactivities are observed within a channel, they receive ranks 3 and 2 (no 1).</li>
     <li>If no noticeable difference in reactivity is observed, the channel is not scored (the cell remains blank).</li>
   </ul>
-  <p>Ranks across channels are summed for each relevant question (SUBTOTALS), and across multiple presentations they are added into a "Grand Rank Total." The question(s) with the highest grand total are highlighted in color; if several questions reach the same maximum rank, all of them are highlighted, without artificially picking a single "winner."</p>
+  <p>Ranks across channels are summed for each relevant question (SUBTOTALS), and across multiple presentations they are added into a "Grand Rank Total." On the significance chart, the three questions with the highest grand total are highlighted in color (red — highest, orange — second, yellow — third), the rest in gray. If several questions reach the same rank within the top three, they receive the same color.</p>
 
   <h3>5.3. Sources</h3>
   <ul>
@@ -356,7 +356,7 @@
       <p>Concealed Information Test. Dynamic Lykken probability matrix.</p>
     </div>
     <div class="col-card green">
-      <h4><svg class="ic-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18M7 8l-4 4 4 4M17 8l4 4-4 4"/></svg> R&amp;I <span style="font-size:10px; background:#dcfce7; color:#166534; padding:1px 5px; border-radius:3px;">NEW</span></h4>
+      <h4><svg class="ic-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18M7 8l-4 4 4 4M17 8l4 4-4 4"/></svg> R&I <span style="font-size:10px; background:#dcfce7; color:#166534; padding:1px 5px; border-radius:3px;">NEW</span></h4>
       <p>FROSS rank method for supplementary RI screening test analysis.</p>
     </div>
     <div class="col-card green">
@@ -393,7 +393,7 @@
   </div>
 
   <div class="footer">
-    Polygraph Suite v8.9 | Developed for professional polygraph assessment<br>
+    Polygraph Suite v8.10 | Developed for professional polygraph assessment<br>
     All methodological provisions are based on official publications and reference tables of ESS-M and CIT.
   </div>
 </div>
