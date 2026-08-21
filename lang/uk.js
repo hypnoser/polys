@@ -146,6 +146,10 @@ window.STRINGS = {
   ri_add_btn: "+ Додати обрахунок",
   ri_chart_title: "Значущість питань",
   ri_chart_empty: "Введіть бали, щоб побачити графік значущості.",
+<<<<<<< HEAD
+=======
+  ri_presentation: "Пред'явлення",
+>>>>>>> 971ff3df89a79dc8725bfe4748ce59a915c81da2
   ri_grand_total_l1: "Загальний",
   ri_grand_total_l2: "ранг",
   ri_clear_table_title: "Очистити бали цієї таблиці",

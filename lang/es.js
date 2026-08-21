@@ -146,6 +146,10 @@ window.STRINGS = {
   ri_add_btn: "+ Añadir Cálculo",
   ri_chart_title: "Significancia de las Preguntas",
   ri_chart_empty: "Introduzca las puntuaciones para ver el gráfico de significancia.",
+<<<<<<< HEAD
+=======
+  ri_presentation: "Presentación",
+>>>>>>> 971ff3df89a79dc8725bfe4748ce59a915c81da2
   ri_grand_total_l1: "Rango total",
   ri_grand_total_l2: "general",
   ri_clear_table_title: "Borrar las puntuaciones de esta tabla",
