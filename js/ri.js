@@ -40,6 +40,18 @@ window.RI_API = (function () {
     });
   };
 
+  // За зразком ESS-M: номер тесту визначається виключно позицією в DOM,
+  // не власним testCounter — тому після видалення тесту нумерація лишається суцільною.
+  var updateTestNumbers = function () {
+    testsContainer.querySelectorAll('.ri-test-wrapper').forEach(function (w, idx) {
+      var num = idx + 1;
+      var label = w.querySelector('.ri-test-num-label');
+      if (label) label.textContent = S.test_num + num + ':';
+      var h3 = w.querySelector('.ri-modal-overlay .ess-modal-header h3');
+      if (h3) h3.textContent = S.ess_questions_modal_title + num;
+    });
+  };
+
   function sanitizeRank(val) {
     val = val.trim();
     if (val === '' || val === '0' || val === '1' || val === '2' || val === '3') return val;
@@ -306,6 +318,7 @@ window.RI_API = (function () {
     wrapper.querySelector('.ri-delete-btn').addEventListener('click', function () {
       if (confirm(S.ess_confirm_delete_test)) {
         wrapper.remove();
+        updateTestNumbers();
         triggerUnsaved();
         performSave();
       }
@@ -344,6 +357,7 @@ window.RI_API = (function () {
     });
 
     testsContainer.appendChild(wrapper);
+    updateTestNumbers();
     return wrapper;
   }
 
